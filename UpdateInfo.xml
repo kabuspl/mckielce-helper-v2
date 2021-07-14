@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <item>
     <version>2.0.0.0</version>
-    <url>https://github.com/kabuspl/mckielce-helper-v2/releases/latest/download/app.zip</url>
-    <changelog>https://github.com/kabuspl/mckielce-helper-v2/releases</changelog>
+    <url>https://github.com/kabuspl/mckielce-helper/releases/latest/download/bin.7z</url>
     <mandatory>false</mandatory>
 </item>
