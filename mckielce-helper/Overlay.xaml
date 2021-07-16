@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mckielce_helper"
         mc:Ignorable="d"
-        Title="Overlay" Height="95" Width="200" WindowStyle="None" AllowsTransparency="True" Background="#7F000000" Topmost="True">
-    <Grid>
-        <ProgressBar x:Name="progress" Height="40" VerticalAlignment="Top" Background="#7F000000" Foreground="#7F00BF22" BorderBrush="{x:Null}" BorderThickness="0" />
-        <Label x:Name="text" Content="Wykonano 0/0&#xD;&#xA;Pozostało 00:00&#xD;&#xA;Pozycja 0;0" Margin="0,40,0,0" Foreground="White" Padding="10,0,2,3" FontSize="10" VerticalContentAlignment="Center"/>
+        Title="Overlay" Height="78" Width="200" WindowStyle="None" ShowActivated="False" ShowInTaskbar="False" AllowsTransparency="True" Background="#00000000" Topmost="True">
+    <Border Background="#7F000000" BorderThickness="0" CornerRadius="0,0,10,10">
+        <Grid>
+            <ProgressBar x:Name="progress" Height="23" VerticalAlignment="Top" Background="#7F000000" Foreground="#7F00D626" BorderBrush="{x:Null}" BorderThickness="0" />
+            <Label x:Name="text" Content="Wykonano 0/0&#xD;&#xA;Pozostało 00:00&#xD;&#xA;Pozycja 0;0" Margin="0,23,0,0" Foreground="White" Padding="10,0,2,3" FontSize="10" VerticalContentAlignment="Center"/>
 
-    </Grid>
+        </Grid>
+    </Border>
 </Window>
