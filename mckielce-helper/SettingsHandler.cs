@@ -22,7 +22,7 @@ namespace mckielce_helper {
                 appdataFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "mckielce_helper", "settings.json");
                 if (File.Exists(appdataFile)) return;
                 File.Copy(defaultsFile, appdataFile);
-            }catch(Exception ex) {
+            } catch (Exception ex) {
                 Console.WriteLine(ex.ToString());
             }
         }

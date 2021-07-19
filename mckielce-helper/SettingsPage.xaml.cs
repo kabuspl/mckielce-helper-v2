@@ -20,7 +20,7 @@ namespace mckielce_helper {
     public partial class SettingsPage : UserControl {
         public SettingsPage() {
             InitializeComponent();
-            if((bool)SettingsHandler.Get("auto_update_install")) {
+            if ((bool)SettingsHandler.Get("auto_update_install")) {
                 autoinstall.IsChecked = true;
             } else {
                 askforinstall.IsChecked = true;

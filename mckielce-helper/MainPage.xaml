@@ -19,14 +19,15 @@
                 <ComboBoxItem Content="//replace" IsSelected="True"/>
                 <ComboBoxItem Content="//set"/>
                 <ComboBoxItem Content="//line"/>
+                <ComboBoxItem Content="//forest"/>
             </ComboBox>
         </GroupBox>
-        <GroupBox Header="Pierwotny blok" HorizontalAlignment="Left" Height="47"  Margin="155,38,0,0" VerticalAlignment="Top" Width="140">
+        <GroupBox x:Name="fromBlockBox" Header="Pierwotny blok" HorizontalAlignment="Left" Height="47"  Margin="155,38,0,0" VerticalAlignment="Top" Width="140">
             <ComboBox Text="TextBox" VerticalContentAlignment="Center" IsEditable="True" x:Name="fromBlock">
 
             </ComboBox>
         </GroupBox>
-        <GroupBox Header="Docelowy blok" Height="47" Margin="300,38,10,0" VerticalAlignment="Top">
+        <GroupBox x:Name="toBlockBox" Header="Docelowy blok" Height="47" Margin="300,38,10,0" VerticalAlignment="Top">
             <ComboBox Text="TextBox" VerticalContentAlignment="Center" IsEditable="True" x:Name="toBlock">
 
             </ComboBox>
@@ -55,7 +56,7 @@
                 <xctk:IntegerUpDown x:Name="height" VerticalAlignment="Top" HorizontalAlignment="Left" Width="52" Margin="65,3,0,0" Maximum="255" Minimum="40" DefaultValue="40" Text="40" Height="20" />
                 <Label Content="Wysokość:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="65"/>
                 <Label Content="Szybkość:" Grid.Column="1" VerticalAlignment="Top" ToolTip="Zmienianie niezalecane" HorizontalAlignment="Left"/>
-                <Slider x:Name="speed" Grid.Column="1" Margin="66,3,10,0" VerticalAlignment="Top" Height="20" Minimum="1" Maximum="4" Value="2" SmallChange="1" AutoToolTipPlacement="TopLeft" IsSnapToTickEnabled="True" ValueChanged="speed_ValueChanged"/>
+                <Slider x:Name="speed" Grid.Column="1" Margin="61,3,10,0" VerticalAlignment="Top" Height="20" Minimum="1" Maximum="4" Value="2" SmallChange="1" AutoToolTipPlacement="TopLeft" IsSnapToTickEnabled="True" ValueChanged="speed_ValueChanged"/>
             </Grid>
 
         </GroupBox>

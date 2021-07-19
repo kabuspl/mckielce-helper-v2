@@ -41,10 +41,9 @@ namespace mckielce_helper {
             AutoUpdater.RunUpdateAsAdmin = false;
             AutoUpdater.CheckForUpdateEvent += AutoUpdaterOnCheckForUpdateEvent;
             AutoUpdater.Start("https://raw.githubusercontent.com/kabuspl/mckielce-helper-v2/main/UpdateInfo.xml");
-            
+
             DispatcherTimer timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(30) };
-            timer.Tick += delegate
-            {
+            timer.Tick += delegate {
                 updFromBtn = false;
                 firstcheck = false;
                 AutoUpdater.Start("https://raw.githubusercontent.com/kabuspl/mckielce-helper-v2/main/UpdateInfo.xml");
@@ -76,12 +75,12 @@ namespace mckielce_helper {
                     } else if (!firstcheck && !updFromBtn) {
                         updatebtn.Source = new BitmapImage(new Uri("Resources/down-arrow-a.png", UriKind.Relative));
                         updatebtn2.ToolTip = "Zaktualizuj";
-                    }else {
-                        DialogResult result = System.Windows.Forms.MessageBox.Show("Nowa wersja jest dostępna. Czy chcesz zainstalować?","Aktualizacja",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                    } else {
+                        DialogResult result = System.Windows.Forms.MessageBox.Show("Nowa wersja jest dostępna. Czy chcesz zainstalować?", "Aktualizacja", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         install = result == System.Windows.Forms.DialogResult.Yes;
                     }
 
-                    if (install&&(firstcheck||updFromBtn)) {
+                    if (install && (firstcheck || updFromBtn)) {
                         try {
                             if (AutoUpdater.DownloadUpdate(args)) {
                                 System.Windows.Application.Current.Shutdown();
@@ -92,7 +91,7 @@ namespace mckielce_helper {
                             System.Windows.Forms.MessageBox.Show("Zjebało się");
                         }
                     }
-                }else if(updFromBtn) {
+                } else if (updFromBtn) {
                     System.Windows.Forms.MessageBox.Show("Posiadasz aktualną wersję 😀");
                 }
             }

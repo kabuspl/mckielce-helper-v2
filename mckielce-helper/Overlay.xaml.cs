@@ -32,7 +32,7 @@ namespace mckielce_helper {
             long end = sw.ElapsedMilliseconds;
             DispatcherTimer timer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(100) };
             timer.Tick += delegate {
-                time += end-start;
+                time += end - start;
                 start = end;
                 end = sw.ElapsedMilliseconds;
                 long lefttime = totaltime - time;

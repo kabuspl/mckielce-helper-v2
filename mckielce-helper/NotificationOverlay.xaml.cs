@@ -39,7 +39,7 @@ namespace mckielce_helper {
 
         private void Window_Closing(object sender, CancelEventArgs e) {
             Closing -= Window_Closing;
-            if(instantClose) {
+            if (instantClose) {
                 return;
             }
             e.Cancel = true;
